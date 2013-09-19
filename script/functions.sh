@@ -20,14 +20,7 @@ fail () {
 }
 
 link_files () {
-  if [ -f $2 ] || [ -d $2 ]; then
-    # If the desination file exists and is a file or directory, rename it
-    mv $2 $2.backup
-  elif [ -L $2 ]; then
-    # if the link already exists, unlink it
-    unlink $2
-  fi
-
+  rm -f $2
   ln -s $1 $2
   success "linked $1 to $2"
 }
