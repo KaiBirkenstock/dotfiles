@@ -3,6 +3,11 @@
 DOTFILES_ROOT=`pwd`
 CURDIR=`dirname $0`
 SCRIPT_NAME=`basename $0`
+MAKE="make"
+
+if [ `uname` == "FreeBSD" ]; then
+  MAKE="gmake"
+fi
 
 success () {
   printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
