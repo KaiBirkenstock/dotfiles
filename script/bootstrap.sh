@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO: Symlinken
-# TODO: install.sh ausführen
-# TODO: make && make install
 set -e
 
 . `pwd`/script/functions.sh

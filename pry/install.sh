@@ -1,3 +1,3 @@
 . script/functions.sh
 
-cd ${CURDIR}/irb-config && make irb && make irbrc && make pryrc && cd ${OLDPWD}
+cd ${CURDIR}/irb-config && ${MAKE} irb && ${MAKE} irbrc && ${MAKE} pryrc && cd ${OLDPWD}
