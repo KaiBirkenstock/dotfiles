@@ -1,0 +1,50 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+ARCH=`uname`
+
+if [ $ARCH = "FreeBSD" ]; then
+  port_search () {
+    cd /usr/ports
+    make search key=$1 | grep Path | awk '{print $2}'
+    cd $OLDPWD
+  }
+fi
+
+alias e="emacsclient -t"
+alias ec="emacsclient -c"
+
+cook_and_clean() {
+  bundle exec knife solo cook "$*"
+  bundle exec knife solo clean "$*"
+}
+
+alias git_left_over_local="git branch --merged master | grep -v 'master$' | \
+                           xargs"
+alias git_left_over_remote="git branch -r --merged origin/master | sed \
+                              's/origin\\//:/' | egrep -v 'HEAD|master' | xargs"
+
+export TERM=xterm-256color
+
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] &&\
+  source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Carton: Emacs package management (installation with: curl -fsSkL \
+# https://raw.github.com/rejeep/carton/master/go | sh)
+[[ -s $HOME/.carton/bin ]] &&\
+  export PATH="${HOME}/.carton/bin:$PATH"
+
+#__rvm_project_rvmrc
+# Local Variables:
+# mode: sh
+# End:

@@ -1,0 +1,12 @@
+[submodule "emacs.d"]
+	path = emacs.d
+	url = git@github.com:funglaub/emacs.d.git
+[submodule "emacs/emacs.d"]
+	path = emacs/emacs.d
+	url = git@github.com:funglaub/emacs.d.git
+[submodule "zsh/zprezto"]
+	path = zsh/zprezto
+	url = git://github.com/sorin-ionescu/prezto.git
+[submodule "pry/irb-config"]
+	path = pry/irb-config
+	url = git://github.com/nviennot/irb-config.git

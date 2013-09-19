@@ -1,0 +1,34 @@
+# -*- mode: conf; -*-
+
+[include]
+  path = ~/.gitconfig.local
+[core]
+  autocrlf = false
+  safecrlf = true
+  excludesfile = ~/.gitignore
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  prs = pull --rebase --stat
+  fixup = commit --fixup
+  squash = commit --squash
+  ri = rebase --interactive --autosquash
+  dash = diff --cached
+  fp = fetch -p
+  ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short
+  standup = log --pretty=format:\"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]\" --decorate --date=short --since '1 day ago' --oneline
+[color]
+  ui = true
+  diff = true
+  status = true
+  branch = auto
+[apply]
+  whitespace = nowarn
+[push]
+  default = simple
+[merge]
+  tool = opendiff
