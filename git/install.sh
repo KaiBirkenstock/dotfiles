@@ -1,8 +1,10 @@
 . script/functions.sh
 
 setup_gitconfig() {
-  # echo $GIT_AUTHORNAME
-  link_files ${DOTFILES_ROOT}/git/gitconfig ${HOME}/.gitconfig
+  for i in gitconfig gitignore; do
+    link_files ${DOTFILES_ROOT}/git/${i} ${HOME}/.${i}
+  done
+
   rm -f ${HOME}/.gitconfig.local
   sed -e "s/AUTHORNAME/${GIT_AUTHORNAME}/" \
       -e "s/AUTHOREMAIL/${GIT_AUTHOREMAIL}/" \
