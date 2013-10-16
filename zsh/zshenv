@@ -45,7 +45,7 @@ fi
 export GOPATH=$HOME/libs/go
 export GOBIN=$HOME/bin
 export PATH=$HOME/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
-export PATH=$PATH:/bin:/usr/games:$GOROOT/bin:$NODE_BIN
+export PATH=$PATH:/bin:/usr/games:$GOPATH/bin:$NODE_BIN
 
 # Default editor unless not already set somewhere above OS specific
 # Should do for BSD and Linux
