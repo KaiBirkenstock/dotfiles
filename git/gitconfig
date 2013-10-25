@@ -6,6 +6,7 @@
   autocrlf = false
   safecrlf = true
   excludesfile = ~/.gitignore
+  commentchar = ;
 [alias]
   co = checkout
   ci = commit
