@@ -23,9 +23,10 @@ fi
 
 alias e="emacsclient -t"
 alias ec="emacsclient -c"
+alias tmux="ssh-agent tmux"
 
 cook_and_clean() {
-  bundle exec knife solo cook "$*"
+  bundle exec knife solo cook "$*" --no-chef-check
   bundle exec knife solo clean "$*"
 }
 
