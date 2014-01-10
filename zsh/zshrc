@@ -34,6 +34,8 @@ alias git_left_over_local="git branch --merged master | grep -v 'master$' | \
                            xargs"
 alias git_left_over_remote="git branch -r --merged origin/master | sed \
                               's/origin\\//:/' | egrep -v 'HEAD|master' | xargs"
+alias todo="ag 'TODO((?!Prio).)*:'"
+alias todo_for_me="ag 'TODO\s?(Flo2)?:'"
 
 export TERM=xterm-256color
 
