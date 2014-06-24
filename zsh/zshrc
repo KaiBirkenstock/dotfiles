@@ -30,22 +30,6 @@ cook_and_clean() {
   bundle exec knife solo clean "$*"
 }
 
-# TODO:
-# function wtg () { (cd ~/Projekte/meta-nww/libs/what_the_gem; ./bin/wtg $*) }
-
-checkout_master() {
-  if [ -z ${WTG_BASE_PATH} ]; then
-    BASE=/var/www
-  else
-    BASE=WTG_BASE_PATH
-  fi
-
-  pushd
-  for i in current current/legacy-app libs/tt_xml libs/nww_ibe libs/generic_http_request; do
-    cd $BASE/$i && gco master && gfr
-  done;
-  popd
-}
 
 alias git_left_over_local="git branch --merged master | grep -v 'master$' | \
                            xargs"
