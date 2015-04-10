@@ -40,7 +40,6 @@ zstyle ':prezto:load' pmodule \
   'rsync' \
   'osx' \
   'syntax-highlighting' \
-  'prompt' \
   'archive' \
   'ssh' \
   'tmux'
