@@ -11,7 +11,6 @@
 
 # Set case-sensitivity for completion, history lookup, etc.
 zstyle ':prezto:*:*' case-sensitive 'no'
-
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
@@ -42,12 +41,13 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'archive' \
   'ssh' \
-  'tmux'
+  'tmux' \
+  'emacs'
 
 zstyle ':prezto:module:editor' keymap 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
-zstyle ':prezto:module:prompt' theme 'nicoulaj'
+zstyle ':prezto:module:prompt' theme 'smiley'
 zstyle ':prezto:module:syntax-highlighting' color 'yes'
 zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
