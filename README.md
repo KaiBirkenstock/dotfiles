@@ -10,7 +10,7 @@ Installation
 Clone the repository somehwere on your disk:
 
 ```
-git clone https://github.com/funglaub/dotfiles.git ~/.dotfiles
+git clone https://github.com/KaiBirkenstock/dotfiles.git ~/.dotfiles
 ```
 
 and launch the bootstrap script like this
